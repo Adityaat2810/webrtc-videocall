@@ -1,15 +1,15 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import Home from './pages/home'
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import { SocketProvider } from '../providers/socket';
 
 function App() {
   return (
-    <BrowserRouter>
+    <SocketProvider>
       <Routes>
-        <Route path='/' element={<Home/>} />
-
+        <Route path='/' element={<Home />} />
       </Routes>
-    </BrowserRouter>
-  )
+    </SocketProvider>
+  );
 }
 
-export default App
+export default App;
